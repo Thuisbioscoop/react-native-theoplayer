@@ -22,13 +22,7 @@ import {
   TimeLabel,
   UiContainer,
 } from '@theoplayer/react-native-ui';
-import {
-  CastLabsFairplayContentProtectionIntegrationFactory,
-  CastLabsWidevineContentProtectionIntegrationFactory,
-  CastLabsPlayReadyContentProtectionIntegrationFactory,
-} from "@theoplayer/react-native-drm"
-
-import { PlayerConfiguration, PlayerEventType, THEOplayer, THEOplayerView, ContentProtectionRegistry } from 'react-native-theoplayer';
+import { PlayerConfiguration, PlayerEventType, THEOplayer, THEOplayerView } from 'react-native-theoplayer';
 
 import { Platform, StyleSheet, View, ViewStyle } from 'react-native';
 import { SourceMenuButton, SOURCES } from './custom/SourceMenuButton';
@@ -38,7 +32,7 @@ import { PiPSubMenu } from './custom/PipSubMenu';
 const playerConfig: PlayerConfiguration = {
   // Get your THEOplayer license from https://portal.theoplayer.com/
   // Without a license, only demo sources hosted on '*.theoplayer.com' domains can be played.
-  license: "",
+  license: undefined,
   chromeless: true,
   libraryLocation: 'theoplayer',
   cast: {
@@ -51,24 +45,6 @@ const playerConfig: PlayerConfiguration = {
     mediaSessionEnabled: true,
   },
 };
-
-ContentProtectionRegistry.registerContentProtectionIntegration(
-  "castlabs", // integrationId
-  "fairplay", // keySystemId
-  new CastLabsFairplayContentProtectionIntegrationFactory(),
-)
-
-ContentProtectionRegistry.registerContentProtectionIntegration(
-  "castlabs", // integrationId
-  "widevine", // keySystemId
-  new CastLabsWidevineContentProtectionIntegrationFactory(),
-)
-
-ContentProtectionRegistry.registerContentProtectionIntegration(
-  "castlabs", // integrationId
-  "playready", // keySystemId
-  new CastLabsPlayReadyContentProtectionIntegrationFactory(),
-)
 
 /**
  * The example app demonstrates the use of the THEOplayerView with a custom UI using the provided UI components.

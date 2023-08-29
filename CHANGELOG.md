@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.1.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Added an `AnalyticsDescription` property to `SourceDescription` to configure additional source-specific properties for analytics connectors.
+- Added support for sideloaded webVTT and SRT texttracks on iOS.
+- Added Audio Focus for Android, pausing play-out on audio focus loss and resuming play-out once focus has been regained.
+- Added Audio Focus and Audio Becoming Noisy manager for Android.
+
+### Fixed
+
+- Fixed an issue on Android that would cause the player not to reset when setting an empty source.
+- Fixed an issue where a text track cue was not properly removed from the cue list on a TextTrackEventType.REMOVE_CUE event.
+- Fixed an issue on tvOS that allowed the user to pause a CSAI ad using the apple remote control.
+
 ## [2.11.0] - 23-08-10
 
 ### Added

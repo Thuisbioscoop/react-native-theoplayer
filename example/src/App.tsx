@@ -41,12 +41,6 @@ const playerConfig: PlayerConfiguration = {
   license: "",
   chromeless: true,
   libraryLocation: 'theoplayer',
-  cast: {
-    chromecast: {
-      appID: 'CC1AD845',
-    },
-    strategy: 'auto',
-  },
   mediaControl: {
     mediaSessionEnabled: true,
   },
@@ -125,7 +119,6 @@ export default function App() {
                   {!Platform.isTV && (
                     <>
                       <AirplayButton />
-                      <ChromecastButton />
                     </>
                   )}
                   <LanguageMenuButton />
@@ -142,7 +135,6 @@ export default function App() {
               bottom={
                 <>
                   <ControlBar style={{ justifyContent: 'flex-start' }}>
-                    <CastMessage />
                   </ControlBar>
                   <ControlBar>
                     <SeekBar />

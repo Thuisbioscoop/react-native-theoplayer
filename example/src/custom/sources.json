@@ -7,7 +7,7 @@
     ],
     "source": {
       "sources": {
-        "src": "https://cdn.video.dev.pathehome.app/content/phf-XXXXXXXXY/FEATURE/MANIFEST/MPD_CMAF_H264/pathehome-fr_1692620443.ism/.mpd",
+        "src": "https://cdn.video.dev.pathehome.app/phf-XXXXXXXXY/FEATURE/MANIFEST/MPD_CMAF_H264/pathehome-fr_1693303128.ism/.mpd",
         "type": "application/dash+xml",
         "contentProtection": {
           "widevine": {
@@ -20,7 +20,48 @@
             "userId": "rental1"
           }
         }
-      }
+      },
+      "textTracks": [
+        {
+          "default": true,
+          "src": "https://cdn.video.dev.pathehome.app/phf-XXXXXXXXY/FEATURE/THUMBNAILS/61ce17fa-da1f-4e77-92db-2c2843179c24/thumbnail_f06af4e1ce_240_136.vtt",
+          "label": "thumbnails",
+          "kind": "metadata"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Pathé Home - HLS - DRM",
+    "os": [
+      "ios"
+    ],
+    "source": {
+      "sources": {
+        "src": "https://cdn.video.dev.pathehome.app/phf-XXXXXXXXY/FEATURE/MANIFEST/HLS_CMAF/pathehome-fr_1692620443.ism/.m3u8",
+        "type": "application/dash+xml",
+        "contentProtection": {
+          "fairplay": {
+            "certificateURL": "https://lic.staging.drmtoday.com/license-server-fairplay/cert/pathehome",
+            "licenseAcquisitionURL": "https://lic.staging.drmtoday.com/license-server-fairplay/"
+          },
+          "integration": "castlabs",
+          "integrationParameters": {
+            "sessionId": "default",
+            "merchant": "pathehome",
+            "userId": "rental1"
+          }
+        }
+      },
+      "textTracks": [
+        {
+          "default": true,
+          "src": "https://cdn.video.dev.pathehome.app/phf-XXXXXXXXY/FEATURE/THUMBNAILS/61ce17fa-da1f-4e77-92db-2c2843179c24/thumbnail_f06af4e1ce_240_136.vtt",
+          "label": "thumbnails",
+          "kind": "metadata",
+          "srclang": "en"
+        }
+      ]
     }
   },
   {
@@ -31,9 +72,17 @@
     ],
     "source": {
       "sources": {
-        "src": "https://cdn.video.dev.pathehome.app/content/phf-XXXXXXXXY/TRAILER/MANIFEST/MPD_CMAF_H264/pathehome-fr_1692620354.ism/.mpd",
+        "src": "https://cdn.video.dev.pathehome.app/phf-XXXXXXXXY/TRAILER/MANIFEST/MPD_CMAF_H264/pathehome-fr_1692620354.ism/.mpd",
         "type": "application/dash+xml"
-      }
+      },
+      "textTracks": [
+        {
+          "default": true,
+          "src": "https://cdn.video.dev.pathehome.app/phf-XXXXXXXXY/FEATURE/THUMBNAILS/61ce17fa-da1f-4e77-92db-2c2843179c24/thumbnail_f06af4e1ce_240_136.vtt",
+          "label": "thumbnails",
+          "kind": "metadata"
+        }
+      ]
     }
   }
 ]

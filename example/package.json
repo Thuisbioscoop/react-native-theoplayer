@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@react-native-community/slider": "^4.4.2",
+    "@theoplayer/react-native-drm": "github:Thuisbioscoop/react-native-theoplayer-drm",
     "@theoplayer/react-native-ui": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
